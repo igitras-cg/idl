@@ -1,1 +1,54 @@
+IDL
+
+1. What's IDL?
+
+IDL representing for igitras code generating description language. It described all the components of the code generators working on and all the generators should implemented all the functions described in this document.
+
+2. Components
+
+1) Model
+Property(s)
+
+model <name> {
+	<prop_name> Type [Constrain(s)];
+}
+
+2) Enum 
+
+enum {
+	V1, V2
+}
+
+3) Relationship
+
+Relationship Type + Model(from) + Model(To);
+
+relationship <RelationShip Type> {
+	<Model Name>{prop_name} to <Model Name>{prop_name};
+}
+
+Relationship Type can be one of:
+OneToMany | ManyToOne | OneToOne | ManyToMany
+
+4) Property
+Name + Type + Constrain(s)
+
+<prop_name> Type [Constrain(s)];
+
+
+5) Type
+
+<Enum>
+String
+Integer
+Long
+Double
+Boolean
+LocalDate
+ZoneDateTime
+
+6) Constrain
+
+Required, Min, Max, Pattern, MinLength, MaxLength
+
 
